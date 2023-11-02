@@ -1,7 +1,5 @@
 # Traveloo
 
-**Traveloo dasturi**
-
 ## Proyekt haqida
 
 Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dastur sayohatlar bilan bog'liq ma'lumotlarni boshqarish imkonini beradi.
