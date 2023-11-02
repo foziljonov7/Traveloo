@@ -14,29 +14,29 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 > - Entity Framework 7
 > - PostgreSQL ma'lumotlar bazasi
 
-Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
-> ``` dotnet restore ```
+### Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
+### ``` dotnet restore ```
 
-Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
+## Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
 
 **PostgreSQL ma'lumotlar bazasini sozlang.**
 
-> Web.config faylida kerakli sozlamalarni o'zgartiring.
+> **Web.config** faylida kerakli sozlamalarni o'zgartiring.
 
-**Migratsiyalarni bajaring:**
+### **Migratsiyalarni bajaring:**
 
-> ` dotnet ef database update `
+### ` dotnet ef database update `
 
-**Dasturni ishga tushiring:**
+### **Dasturni ishga tushiring:**
 
-> ` dotnet run `
+### ` dotnet run `
 
 Brauzeringizda **http://localhost:5000** manzilini oching.
 > Qo'llanma
 >> Qo'llanmaga bu havoladan o'ting, qo'llanmada dastur ishlatish, sahifalarni boshqarish va boshqa muhim funktsiyalarni ko'rish mumkin.
 
 Muallif
-> Proyektning avtori: **Abdulvosid Foziljonov**
+> Proyektning avtori: ####**Abdulvosid Foziljonov**
 
 Lisensiya
 > Ushbu proyekt **MIT litsenziyasi** asosida taqdim etilgan.
