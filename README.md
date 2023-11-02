@@ -6,13 +6,13 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 
 ## Tashqi kerakli kutubxona va o'rnatish
 
-Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va dasturlarni talab qiladi:
+### Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va dasturlarni talab qiladi:
 
-- .NET Framework 7 versiya
-- Blazor 7
-- WPF 7
-- Entity Framework 7
-- PostgreSQL ma'lumotlar bazasi
+> - .NET Framework 7 versiya
+> - Blazor 7
+> - WPF 7
+> - Entity Framework 7
+> - PostgreSQL ma'lumotlar bazasi
 
 Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
 > ``` dotnet restore ```
