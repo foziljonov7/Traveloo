@@ -16,21 +16,18 @@ Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va dasturlarni talab
 - Entity Framework 7
 - PostgreSQL ma'lumotlar bazasi
 
-Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring: <br> 
+Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
 > ``` dotnet restore ```
-<br>
-Loyiha ishga tushirish <br>
+Loyiha ishga tushirish
 Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
-<br>
->PostgreSQL ma'lumotlar bazasini sozlang. <br>
+> PostgreSQL ma'lumotlar bazasini sozlang.
 >> Web.config faylida kerakli sozlamalarni o'zgartiring.
 Migratsiyalarni bajaring:
-` dotnet ef database update `
-<br>
-Dasturni ishga tushiring: <br>
-` dotnet run `
-<br>
-Brauzeringizda <a> http://localhost:5000 </a> manzilini oching. <br>
+> ` dotnet ef database update `
+Dasturni ishga tushiring:
+> ` dotnet run `
+
+Brauzeringizda **http://localhost:5000** manzilini oching.
 > Qo'llanma
 >> Qo'llanmaga bu havoladan o'ting, qo'llanmada dastur ishlatish, sahifalarni boshqarish va boshqa muhim funktsiyalarni ko'rish mumkin.
 
