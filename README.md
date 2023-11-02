@@ -22,7 +22,7 @@ Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
 
 **PostgreSQL ma'lumotlar bazasini sozlang.**
 
-> **Web.config** faylida kerakli sozlamalarni o'zgartiring.
+**Web.config** faylida kerakli sozlamalarni o'zgartiring.
 
 Migratsiyalarni bajaring:
 
