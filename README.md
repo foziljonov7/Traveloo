@@ -28,10 +28,11 @@ PostgreSQL ma'lumotlar bazasini sozlang.
 Migratsiyalarni bajaring: <br>
 bash
 Copy
-``` dotnet ef database update ``` <br>
+> ``` dotnet ef database update ```
+<br>
 Dasturni ishga tushiring: <br>
-Copy
-` dotnet run ` <br>
+``` dotnet run ```
+>  <br>
 Brauzeringizda <a> http://localhost:5000 </a> manzilini oching. <br>
 > Qo'llanma
 >> Qo'llanmaga bu havoladan o'ting, qo'llanmada dastur ishlatish, sahifalarni boshqarish va boshqa muhim funktsiyalarni ko'rish mumkin.
