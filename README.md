@@ -1,6 +1,6 @@
 # Traveloo
 
-**Traveloo - Sizning ushbu proyektning nomi**
+**Traveloo dasturi**
 
 ## Proyekt haqida
 
