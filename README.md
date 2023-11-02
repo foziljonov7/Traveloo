@@ -18,13 +18,21 @@ Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va dasturlarni talab
 
 Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
 > ``` dotnet restore ```
+
 Loyiha ishga tushirish
+
 > Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
+
 PostgreSQL ma'lumotlar bazasini sozlang.
+
 > Web.config faylida kerakli sozlamalarni o'zgartiring.
+
 Migratsiyalarni bajaring:
+
 > ` dotnet ef database update `
+
 Dasturni ishga tushiring:
+
 > ` dotnet run `
 
 Brauzeringizda **http://localhost:5000** manzilini oching.
