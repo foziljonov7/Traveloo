@@ -22,14 +22,14 @@ Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring: <br>
 Loyiha ishga tushirish <br>
 Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
 <br>
-PostgreSQL ma'lumotlar bazasini sozlang.
-> Web.config faylida kerakli sozlamalarni o'zgartiring. <br>
-Migratsiyalarni bajaring: <br>
-> ``` dotnet ef database update ```
+>PostgreSQL ma'lumotlar bazasini sozlang. <br>
+>> Web.config faylida kerakli sozlamalarni o'zgartiring.
+Migratsiyalarni bajaring:
+` dotnet ef database update `
 <br>
 Dasturni ishga tushiring: <br>
-``` dotnet run ```
->  <br>
+` dotnet run `
+<br>
 Brauzeringizda <a> http://localhost:5000 </a> manzilini oching. <br>
 > Qo'llanma
 >> Qo'llanmaga bu havoladan o'ting, qo'llanmada dastur ishlatish, sahifalarni boshqarish va boshqa muhim funktsiyalarni ko'rish mumkin.
