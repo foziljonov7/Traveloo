@@ -19,19 +19,17 @@ Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va dasturlarni talab
 Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
 > ``` dotnet restore ```
 
-Loyiha ishga tushirish
+Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
 
-> Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
-
-PostgreSQL ma'lumotlar bazasini sozlang.
+**PostgreSQL ma'lumotlar bazasini sozlang.**
 
 > Web.config faylida kerakli sozlamalarni o'zgartiring.
 
-Migratsiyalarni bajaring:
+**Migratsiyalarni bajaring:**
 
 > ` dotnet ef database update `
 
-Dasturni ishga tushiring:
+**Dasturni ishga tushiring:**
 
 > ` dotnet run `
 
@@ -40,7 +38,7 @@ Brauzeringizda **http://localhost:5000** manzilini oching.
 >> Qo'llanmaga bu havoladan o'ting, qo'llanmada dastur ishlatish, sahifalarni boshqarish va boshqa muhim funktsiyalarni ko'rish mumkin.
 
 Muallif
-> Proyektning avtori: Abdulvosid Foziljonov
+> Proyektning avtori: **Abdulvosid Foziljonov**
 
 Lisensiya
-> Ushbu proyekt MIT litsenziyasi asosida taqdim etilgan.
+> Ushbu proyekt **MIT litsenziyasi** asosida taqdim etilgan.
