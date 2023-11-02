@@ -18,6 +18,7 @@ Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va dasturlarni talab
 
 Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
 > ``` dotnet restore ```
+<br>
 Loyiha ishga tushirish
 Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
 > PostgreSQL ma'lumotlar bazasini sozlang.
