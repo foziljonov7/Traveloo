@@ -1,8 +1,13 @@
-var builder = WebApplication.CreateBuilder(args);
+using API.Data;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("localhost")
+    ?? throw new InvalidOperationException("Connection string not found!");
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<AppDbContext>(options
+    => options.UseNpgsql(connectionString));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
