@@ -38,7 +38,7 @@ Brauzeringizda **http://localhost:5000** manzilini oching.
 
 ## Models
 
-### Ticket
+Ticket
 
 > Id - int : random
 
@@ -48,7 +48,7 @@ Brauzeringizda **http://localhost:5000** manzilini oching.
 
 > Date -> UTCNOW
 
-### Human
+Human
 
 > Id - guid : NewGuid
 
@@ -66,7 +66,7 @@ Brauzeringizda **http://localhost:5000** manzilini oching.
 
 > TicketId - int : virtual Ticket
 
-### Category
+Category
 
 > Id - int
 
