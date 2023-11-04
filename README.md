@@ -62,9 +62,9 @@ Human
 
 > Location - string
 
-> CategoryId - int : virtual Category
+> CategoryId - int : virtual Category Id
 
-> TicketId - int : virtual Ticket
+> TicketId - int : virtual Ticket Id
 
 Category
 
