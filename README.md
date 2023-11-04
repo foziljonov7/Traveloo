@@ -36,6 +36,28 @@ Brauzeringizda **http://localhost:5000** manzilini oching.
 > Qo'llanma
 >> Qo'llanmaga bu havoladan o'ting, qo'llanmada dastur ishlatish, sahifalarni boshqarish va boshqa muhim funktsiyalarni ko'rish mumkin.
 
+## Models
+
+### Ticket
+> Id - int : random
+> Fligth - string
+> Price - double
+> Date -> UTCNOW
+
+### Human
+> Id - guid : NewGuid
+> Firstname - string
+> Lastname - string
+> Age - int
+> Phone - string
+> Location - string
+> CategoryId - int : virtual Category
+> TicketId - int : virtual Ticket
+
+### Category
+> Id - int
+> Name - string
+
 Muallif
 > Proyektning avtori: **Abdulvosid Foziljonov**
 
