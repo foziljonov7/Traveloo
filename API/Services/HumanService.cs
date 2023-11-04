@@ -1,6 +1,7 @@
 ﻿using API.Data;
 using API.Dtos;
 using API.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Services
 {
@@ -45,9 +46,11 @@ namespace API.Services
             throw new NotImplementedException();
         }
 
-        public Task<Human> GetHumans(string search)
+        public async Task<IEnumerable<Human>> GetHumans()
         {
-            throw new NotImplementedException();
+            var humans = await dbContext.Humans.ToListAsync();
+
+            return await Task.FromResult(humans);
         }
     }
 }

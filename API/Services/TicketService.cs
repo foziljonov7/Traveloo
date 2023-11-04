@@ -1,6 +1,8 @@
 ﻿using API.Data;
 using API.Dtos;
 using API.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Services
 {
@@ -32,9 +34,11 @@ namespace API.Services
             throw new NotImplementedException();
         }
 
-        public Task<Ticket> GetTickets()
+        public async Task<IEnumerable<Ticket>> GetTickets()
         {
-            throw new NotImplementedException();
+            var tickets = await dbContext.Tickets.ToListAsync();
+
+            return await Task.FromResult(tickets);
         }
     }
 }

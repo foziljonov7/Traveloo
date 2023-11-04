@@ -5,7 +5,7 @@ namespace API.Services
 {
     public interface ITicketService
     {
-        Task<Ticket> GetTickets();
+        Task<IEnumerable<Ticket>> GetTickets();
         Task<Ticket> GetTicket(int ticketId);
         Task<Ticket> CreateTicket(CreateTicketDto dto);
     }

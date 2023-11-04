@@ -1,4 +1,5 @@
-﻿using API.Entities;
+﻿using API.Data;
+using API.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.Validation
@@ -19,7 +20,7 @@ namespace API.Validation
                 return new ValidationResult(FormatErrorMessage(validationContext.MemberName));
 
             else if(human.CategoryId <= 0)
-                return new ValidationResult(FormatErrorMessage(validationContext.MemberName));
+                return new ValidationResult(FormatErrorMessage(validationContext.MemberName));              
 
             return ValidationResult.Success;
         }

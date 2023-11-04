@@ -41,10 +41,11 @@ namespace API.Data
                 .HasForeignKey(h => h.CategoryId)
                 .IsRequired();
             modelBuilder.Entity<Human>()
-                .HasOne(t => t.Ticket)
+                .HasKey(h => h.TicketId);
+            modelBuilder.Entity<Human>()
+                .HasOne(h => h.Ticket)
                 .WithMany()
-                .HasForeignKey(h => h.TicketId)
-                .IsRequired();
+                .HasForeignKey(h => h.TicketId);
             //Category
             modelBuilder.Entity<Category>()
                 .HasKey(c => c.Id);

@@ -17,12 +17,18 @@ namespace API.Controllers
             this.service = service;    
         }
 
-        [HttpPost]
+        [HttpPost("Create")]
         [ValidationActionFilter]
-        public async Task<IActionResult> CreateHuman(CreateHumanDto dto)
+        public async Task<IActionResult> CreateHuman([FromBody] CreateHumanDto dto)
         {
             await service.CreateHuman(dto);
             return Ok(dto);
+        }
+
+        [HttpGet("GetHumans")]
+        public async Task<IActionResult> GetHumans()
+        {
+            return Ok(await service.GetHumans());
         }
     }
 }

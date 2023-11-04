@@ -22,5 +22,10 @@ namespace API.Controllers
             await service.CreateTicket(dto);
             return Ok(dto);
         }
+        [HttpGet("Tickets")]
+        public async Task<IActionResult> GetTickets()
+        {
+            return Ok(await service.GetTickets());
+        }
     }
 }

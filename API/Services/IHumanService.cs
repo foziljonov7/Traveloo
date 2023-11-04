@@ -5,7 +5,7 @@ namespace API.Services
 {
     public interface IHumanService
     {
-        Task<Human> GetHumans(string search);
+        Task<IEnumerable<Human>> GetHumans();
         Task<Human> GetHuman(Guid id);
         Task<Human> CreateHuman(CreateHumanDto dto);
 
