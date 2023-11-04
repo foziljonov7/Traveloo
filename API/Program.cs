@@ -1,4 +1,5 @@
 using API.Data;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,11 @@ var connectionString = builder.Configuration.GetConnectionString("localhost")
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options
     => options.UseNpgsql(connectionString));
+
+//Services
+builder.Services.AddScoped<IHumanService, HumanService>();
+builder.Services.AddScoped<ITicketService, TicketService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
