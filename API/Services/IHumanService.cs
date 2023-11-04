@@ -10,6 +10,6 @@ namespace API.Services
         Task<Human> CreateHuman(CreateHumanDto dto);
 
         Task<Human> EditHuman(Guid id, EditHumanDto dto);                                           
-        Task<Human> DeleteHuman(Guid id);
+        Task<bool> DeleteHuman(Guid id);
     }
 }

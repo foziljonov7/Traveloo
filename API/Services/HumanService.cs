@@ -1,6 +1,7 @@
 ﻿using API.Data;
 using API.Dtos;
 using API.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Services
@@ -31,19 +32,51 @@ namespace API.Services
             return await Task.FromResult(created.Entity);
         }
 
-        public Task<Human> DeleteHuman(Guid id)
+        public async Task<bool> DeleteHuman(Guid id)
         {
-            throw new NotImplementedException();
+            var human = await dbContext.Humans
+                .FirstOrDefaultAsync(h => h.Id == id);
+
+            if (human is null)
+                return false;
+
+            dbContext.Humans.Remove(human);
+            await dbContext.SaveChangesAsync();
+
+            return true;
         }
 
-        public Task<Human> EditHuman(Guid id, EditHumanDto dto)
+        public async Task<Human> EditHuman(Guid id, EditHumanDto dto)
         {
-            throw new NotImplementedException();
+            var human = await dbContext.Humans
+                .FirstOrDefaultAsync(h => h.Id == id);
+
+            if (human is null)
+                return null;
+
+            human.Firstname = dto.Firstname;
+            human.Lastname = dto.Lastname;
+            human.Age = dto.Age;
+            human.PhoneNumber = dto.PhoneNumber;
+            human.Location = dto.Location;
+            human.CategoryId = dto.CategoryId;
+
+            await dbContext.SaveChangesAsync();
+            return human;
         }
 
-        public Task<Human> GetHuman(Guid id)
+        public async Task<Human> GetHuman(Guid id)
         {
-            throw new NotImplementedException();
+            var human = await dbContext.Humans
+                .Where(h => h.Id == id)
+                .Include(p => p.Category)
+                .Include(p => p.Ticket)
+                .FirstOrDefaultAsync();
+
+            if (human is null)
+                return null;
+            
+            return human;
         }
 
         public async Task<IEnumerable<Human>> GetHumans()

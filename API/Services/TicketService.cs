@@ -29,9 +29,16 @@ namespace API.Services
             return await Task.FromResult(created.Entity);
         }
 
-        public Task<Ticket> GetTicket(int ticketId)
+        public async Task<Ticket> GetTicket(int ticketId)
         {
-            throw new NotImplementedException();
+            var ticket = await dbContext.Tickets
+                .Where(p => p.Id == ticketId)
+                .FirstOrDefaultAsync();
+
+            if (ticket is null)
+                return null;
+
+            return ticket;
         }
 
         public async Task<IEnumerable<Ticket>> GetTickets()

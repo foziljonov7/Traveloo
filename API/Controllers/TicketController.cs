@@ -27,5 +27,10 @@ namespace API.Controllers
         {
             return Ok(await service.GetTickets());
         }
+        [HttpGet("GetTicket/{id}")]
+        public async Task<IActionResult> GetTicket([FromRoute] int id)
+        {
+            return Ok(await service.GetTicket(id));
+        }
     }
 }

@@ -30,5 +30,22 @@ namespace API.Controllers
         {
             return Ok(await service.GetHumans());
         }
+        [HttpGet("GetHuman/{id}")]
+        public async Task<IActionResult> GetHuman([FromRoute] Guid id)
+        {
+            return Ok(await service.GetHuman(id));
+        }
+        [HttpPut("Edit/{id}")]
+        public async Task<IActionResult> EditHuman(
+            [FromRoute] Guid id,
+            [FromBody] EditHumanDto dto)
+        {
+            return Ok(await service.EditHuman(id, dto));
+        }
+        [HttpDelete("Remove/{id}")]
+        public async Task<IActionResult> RemoveHuman(Guid id)
+        {
+            return Ok(await service.DeleteHuman(id));
+        }
     }
 }
