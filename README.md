@@ -39,23 +39,37 @@ Brauzeringizda **http://localhost:5000** manzilini oching.
 ## Models
 
 ### Ticket
+
 > Id - int : random
+
 > Fligth - string
+
 > Price - double
+
 > Date -> UTCNOW
 
 ### Human
+
 > Id - guid : NewGuid
+
 > Firstname - string
+
 > Lastname - string
+
 > Age - int
+
 > Phone - string
+
 > Location - string
+
 > CategoryId - int : virtual Category
+
 > TicketId - int : virtual Ticket
 
 ### Category
+
 > Id - int
+
 > Name - string
 
 Muallif
