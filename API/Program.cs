@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options
 //Services
 builder.Services.AddScoped<IHumanService, HumanService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
