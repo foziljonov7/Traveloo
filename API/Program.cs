@@ -1,5 +1,8 @@
 using API.Data;
+using API.Entities.User;
 using API.Services;
+using Identity.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +13,12 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options
     => options.UseNpgsql(connectionString));
 
+builder.Services.AddDbContext<ApplicationDbContext>(options
+    => options.UseNpgsql(connectionString));
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 //Services
 builder.Services.AddScoped<IHumanService, HumanService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
