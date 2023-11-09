@@ -23,5 +23,16 @@ namespace WPF
         {
             InitializeComponent();
         }
+        private void AddUserControl(UserControl userControl)
+        {
+            Panel1.Children.Clear();
+            Panel1.Children.Add(userControl);
+        }
+
+        private void Ticketbtn_Click(object sender, RoutedEventArgs e)
+        {
+            TicketUserControl userControl = new TicketUserControl();
+            AddUserControl(userControl);
+        }
     }
 }
