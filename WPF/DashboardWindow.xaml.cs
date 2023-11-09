@@ -22,15 +22,36 @@ namespace WPF
         public DashboardWindow()
         {
             InitializeComponent();
+            CategoryUserControl userControl = new CategoryUserControl();
+            AddUserControl(userControl);
         }
         private void AddUserControl(UserControl userControl)
         {
             Panel1.Children.Clear();
             Panel1.Children.Add(userControl);
         }
+        private void AddUserControl2(UserControl userControl)
+        {
+            Panel2.Children.Clear();
+            Panel2.Children.Add(userControl);
+        }
 
         private void Ticketbtn_Click(object sender, RoutedEventArgs e)
         {
+            TicjetUserControl userControl = new TicjetUserControl();
+            AddUserControl2(userControl);
+        }
+
+        private void Categorybtn_Click(object sender, RoutedEventArgs e)
+        {
+            CategoryUserControl userControl = new CategoryUserControl();
+            AddUserControl(userControl);
+        }
+
+        private void Humanbtn_Click(object sender, RoutedEventArgs e)
+        {
+            HumanUserControl userControl = new HumanUserControl();
+            AddUserControl2(userControl);
         }
     }
 }

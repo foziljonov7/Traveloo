@@ -105,19 +105,19 @@
                                 Margin="10"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                Foreground="#f4d58d">   
+                                Foreground="#f4d58d" Click="Humanbtn_Click">   
                         </Button>
                     </Grid>
                     <Grid Grid.Column="2">
-                        <Button x:Name="Directionbtn"
+                        <Button x:Name="Categorybtn"
                                 Style="{DynamicResource DashboardBtnStyle}" 
-                                Content="Direction"
+                                Content="Category"
                                 FontSize="26"
                                 FontFamily="Segoe UI Semibold"
                                 Margin="10"
                                 Background="Transparent"
                                 BorderThickness="0"
-                                Foreground="#f4d58d">
+                                Foreground="#f4d58d" Click="Categorybtn_Click">
                         </Button>
                     </Grid>
                 </Grid>
