@@ -6,11 +6,62 @@
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
         Title="DashboardWindow"
-        Height="450"
-        Width="800"
+        Height="680"
+        Width="1024"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
-    <Grid>
-        
+    <Grid Background="#001427">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Border Height="80"
+                    Width="880"
+                    Background="#708d81"
+                    CornerRadius="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Button x:Name="Ticketbtn"
+                                Content="Ticket"
+                                FontSize="26"
+                                FontFamily="Segoe UI Semibold"
+                                Margin="10"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#f4d58d">
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="Humanbtn"
+                                Content="Human"
+                                FontSize="26"
+                                FontFamily="Segoe UI Semibold"
+                                Margin="10"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#f4d58d">   
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Button x:Name="Directionbtn"
+                                Content="Direction"
+                                FontSize="26"
+                                FontFamily="Segoe UI Semibold"
+                                Margin="10"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#f4d58d">
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
