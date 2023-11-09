@@ -31,8 +31,6 @@ namespace WPF
 
         private void Ticketbtn_Click(object sender, RoutedEventArgs e)
         {
-            TicketUserControl userControl = new TicketUserControl();
-            AddUserControl(userControl);
         }
     }
 }
