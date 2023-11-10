@@ -122,6 +122,138 @@
                                     FontSize="18"/>
                         </Grid>
                     </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Label x:Name="CNamw2"
+                                    Content="Tarif reyslar"
+                                    FontSize="24"
+                                    FontFamily="Segoe UI"
+                                    Foreground="#001427"
+                                    VerticalAlignment="Center"
+                                    Margin="25 0 0 0"/>     
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Label Content="Yulduzchalar bo'ladi"
+                                    Foreground="#001427"
+                                    FontSize="18"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Button Style="{DynamicResource CategoryBtnStyles}" 
+                                    x:Name="CBtn2"
+                                     Background="#001427"
+                                     Margin="30 3"
+                                     Content="View"
+                                     Foreground="#f4d58d"
+                                     FontFamily="Segoe UI Semibold"
+                                     FontSize="18"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Label x:Name="CNamw3"
+                                    Content="Xalqaro reyslar"
+                                    FontSize="24"
+                                    FontFamily="Segoe UI"
+                                    Foreground="#001427"
+                                    VerticalAlignment="Center"
+                                    Margin="25 0 0 0"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Label Content="Yulduzchalar bo'ladi"
+                                    Foreground="#001427"
+                                    FontSize="18"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Button Style="{DynamicResource CategoryBtnStyles}"
+                                    x:Name="CBtn3"
+                                     Background="#001427"
+                                     Margin="30 3"
+                                     Content="View"
+                                     Foreground="#f4d58d"
+                                     FontFamily="Segoe UI Semibold"
+                                     FontSize="18"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Label x:Name="CNamw4"
+                                    Content="Transzit reyslar"
+                                    FontSize="24"
+                                    FontFamily="Segoe UI"
+                                    Foreground="#001427"
+                                    VerticalAlignment="Center"
+                                    Margin="25 0 0 0"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Label Content="Yulduzchalar bo'ladi"
+                                    Foreground="#001427"
+                                    FontSize="18"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Button Style="{DynamicResource CategoryBtnStyles}"
+                                    x:Name="CBtn4"
+                                     Background="#001427"
+                                     Margin="30 3"
+                                     Content="View"
+                                     Foreground="#f4d58d"
+                                     FontFamily="Segoe UI Semibold"
+                                     FontSize="18"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Label x:Name="CNamw5"
+                                    Content="Davrli reyslar"
+                                    FontSize="24"
+                                    FontFamily="Segoe UI"
+                                    Foreground="#001427"
+                                    VerticalAlignment="Center"
+                                    Margin="25 0 0 0"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Label Content="Yulduzchalar bo'ladi"
+                                    Foreground="#001427"
+                                    FontSize="18"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Button Style="{DynamicResource CategoryBtnStyles}"
+                                    x:Name="CBtn5"
+                                     Background="#001427"
+                                     Margin="30 3"
+                                     Content="View"
+                                     Foreground="#f4d58d"
+                                     FontFamily="Segoe UI Semibold"
+                                     FontSize="18"/>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Border>
         </Grid>
