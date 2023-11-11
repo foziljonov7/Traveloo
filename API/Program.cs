@@ -1,7 +1,7 @@
 using API.Data;
-using API.Entities.User;
+using API.Entities.Identity;
 using API.Services;
-using Identity.Data;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,12 +13,6 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options
     => options.UseNpgsql(connectionString));
 
-builder.Services.AddDbContext<ApplicationDbContext>(options
-    => options.UseNpgsql(connectionString));
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
 //Services
 builder.Services.AddScoped<IHumanService, HumanService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
@@ -27,6 +21,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAuthentication().AddJwtBearer();
 
 var app = builder.Build();
 
@@ -38,6 +34,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

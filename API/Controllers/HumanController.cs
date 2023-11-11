@@ -1,13 +1,14 @@
 ﻿using API.Dtos;
 using API.Services;
 using API.Validation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Authorize]
     public class HumanController : ControllerBase
     {
         private readonly IHumanService service;
