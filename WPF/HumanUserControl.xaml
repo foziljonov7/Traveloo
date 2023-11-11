@@ -123,7 +123,7 @@
                         Foreground="#001427"
                         FontSize="18"
                         BorderThickness="0"
-                        FontFamily="Segoe UI"/>
+                        FontFamily="Segoe UI" Click="EditHumanBtn_Click"/>
             </Grid>
             <Grid Grid.Column="2">
                 <Button Style="{DynamicResource HumanBtnStyles}"
