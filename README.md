@@ -32,7 +32,7 @@ Migratsiyalarni bajaring:
 
 ` dotnet run `
 
-Brauzeringizda **http://localhost:5000** manzilini oching.
+Brauzeringizda **https://localhost:7220** manzilini oching.
 > Qo'llanma
 >> Qo'llanmaga bu havoladan o'ting, qo'llanmada dastur ishlatish, sahifalarni boshqarish va boshqa muhim funktsiyalarni ko'rish mumkin.
 
