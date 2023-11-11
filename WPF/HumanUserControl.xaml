@@ -88,7 +88,10 @@
                                VerticalAlignment="Center"/>
                     </Grid>
                     <Grid Grid.Row="1">
-                        <!--DataBase-->
+                        <Grid x:Name="ControlPanel"
+                                Margin="5">
+                            
+                        </Grid>
                     </Grid>
                 </Grid>
             </Border>
@@ -109,7 +112,7 @@
                         Foreground="#001427"
                         FontSize="18"
                         BorderThickness="0"
-                        FontFamily="Segoe UI"/>
+                        FontFamily="Segoe UI" Click="CreateHumanBtn_Click"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Button Style="{DynamicResource HumanBtnStyles}"

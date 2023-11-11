@@ -24,5 +24,15 @@ namespace WPF
         {
             InitializeComponent();
         }
+        private void AddUserControl(UserControl userControl)
+        {
+            ControlPanel.Children.Clear();
+            ControlPanel.Children.Add(userControl);
+        }
+        private void CreateHumanBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CreateHumanControl userControl = new CreateHumanControl();
+            AddUserControl(userControl);
+        }
     }
 }
