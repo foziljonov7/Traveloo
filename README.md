@@ -72,6 +72,22 @@ Category
 
 > Name - string
 
+##Identity
+
+>Registration
+
+>>Email
+
+>>Username
+
+>>Password
+
+>Login
+
+>>Email
+
+>>Password
+
 Muallif
 > Proyektning avtori: **Abdulvosid Foziljonov**
 
