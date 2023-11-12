@@ -1,13 +1,10 @@
-﻿using API.Dtos;
-using API.Entities.Identity;
-using BCrypt.Net;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using API.Data;
+using API.Dtos;
+using API.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
@@ -15,58 +12,71 @@ namespace API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        public static User user = new User();
-        private readonly IConfiguration configuration;
-        public AuthController(IConfiguration configuration)
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly TokenService _tokenService;
+        private readonly UsersContext _context;
+
+        public AuthController(UserManager<IdentityUser> userManager,
+            TokenService tokenService,
+            UsersContext context)
         {
-            this.configuration = configuration;
+            _userManager = userManager;
+            _tokenService = tokenService;
+            _context = context;
         }
-
-        [HttpPost("Register")]
-        public ActionResult<User> Register(UserDto request)
+        [HttpPost]
+        [Route("register")]
+        public async Task<IActionResult> Register(RegistrationRequest request)
         {
-            string passwordHash 
-                = BCrypt.Net.BCrypt.HashPassword(request.Password);
-
-            user.Username = request.Username;
-            user.PasswordHash = passwordHash;
-
-            return Ok(user);
-        }
-        [HttpPost("Login")]
-        public ActionResult<User> Login(UserDto request)
-        {
-            if (user.Username != request.Username)
-                return BadRequest("User not found!");
-
-            if (!BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
-                return BadRequest("User wrong password.");
-
-            var token = CreateToken(user);
-
-            return Ok(token);
-        }
-        private string CreateToken(User user)
-        {
-            List<Claim> claims = new List<Claim>
+            if (!ModelState.IsValid)
             {
-                new Claim(ClaimTypes.Name, user.Username)
-            };
+                return BadRequest(ModelState);
+            }
+            var result = await _userManager.CreateAsync(
+                new IdentityUser { UserName = request.Username, Email = request.Email },
+                request.Password
+            );
+            if (result.Succeeded)
+            {
+                request.Password = "";
+                return CreatedAtAction(nameof(Register), new { email = request.Email }, request);
+            }
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(error.Code, error.Description);
+            }
+            return BadRequest(ModelState);
+        }
+        [HttpPost]
+        [Route("login")]
+        public async Task<ActionResult<AuthResponse>> Authenticate([FromBody] AuthRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
-                configuration.GetSection("AppSettings:Token").Value!));
-
-            var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-
-            var token = new JwtSecurityToken(
-                
-                claims: claims,
-                expires: DateTime.Now.AddDays(1),
-                signingCredentials: cred);
-
-            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-
-            return jwt;
+            var managedUser = await _userManager.FindByEmailAsync(request.Email);
+            if (managedUser == null)
+            {
+                return BadRequest("Bad credentials");
+            }
+            var isPasswordValid = await _userManager.CheckPasswordAsync(managedUser, request.Password);
+            if (!isPasswordValid)
+            {
+                return BadRequest("Bad credentials");
+            }
+            var userInDb = _context.Users.FirstOrDefault(u => u.Email == request.Email);
+            if (userInDb is null)
+                return Unauthorized();
+            var accessToken = _tokenService.CreateToken(userInDb);
+            await _context.SaveChangesAsync();
+            return Ok(new AuthResponse
+            {
+                Username = userInDb.UserName,
+                Email = userInDb.Email,
+                Token = accessToken,
+            });
         }
     }
 }
