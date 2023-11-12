@@ -72,7 +72,7 @@ Category
 
 > Name - string
 
-##Identity
+** Identity **
 
 >Registration
 
