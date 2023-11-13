@@ -40,5 +40,11 @@ namespace WPF
             EditHumanControl userControl = new EditHumanControl();
             AddUserControl(userControl);
         }
+
+        private void RemoveHumanBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveUserControl userControl = new RemoveUserControl();
+            AddUserControl(userControl);
+        }
     }
 }

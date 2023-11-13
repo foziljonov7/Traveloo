@@ -134,7 +134,7 @@
                         Foreground="#001427"
                         FontSize="18"
                         BorderThickness="0"
-                        FontFamily="Segoe UI"/>
+                        FontFamily="Segoe UI" Click="RemoveHumanBtn_Click"/>
             </Grid>
         </Grid>
     </Grid>
