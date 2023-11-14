@@ -72,15 +72,15 @@ builder.Services
     {
         options.TokenValidationParameters = new TokenValidationParameters()
         {
-            ClockSkew = TimeSpan.Zero,
+            ClockSkew = TimeSpan.FromMinutes(5),
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = "apiWithTravelooIdentityToken",
-            ValidAudience = "apiWithTravelooIdentityToken",
+            ValidIssuer = "http://localhost:5103/",
+            ValidAudience = "https://localhost:7220/",
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("!SomethingSecret!")
+                Encoding.UTF8.GetBytes("apiWithSecret")
             ),
         };
     });
