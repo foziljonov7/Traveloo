@@ -87,7 +87,8 @@
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"/>
                     </Grid>
-                    <Grid Grid.Row="1">
+                    <Grid x:Name="UserPanel"
+                            Grid.Row="1">
                         <!--DataBase-->
                     </Grid>
                 </Grid>
@@ -110,7 +111,7 @@
                                 Foreground="#001427"
                                 FontSize="18"
                                 BorderThickness="0"
-                                FontFamily="Segoe UI"/>
+                                FontFamily="Segoe UI" Click="CreateTicketBtn_Click"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button Style="{DynamicResource TicketBtnStyles}"
