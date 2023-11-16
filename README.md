@@ -25,7 +25,7 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 > - Microsoft.AspNetCore.Identity.EntityFrameworkCore
 > - System.IdentityModel.Tokens.Jwt
 
- Kutubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
+ Kutubxonalarni qayta ishga tushurish uchun quyidagi komandalarni bajaring:
  
  ``` dotnet restore ```
 
