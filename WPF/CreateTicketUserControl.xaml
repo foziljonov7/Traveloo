@@ -130,7 +130,8 @@
                            Foreground="#001427"
                            VerticalAlignment="Top"
                            Margin="0,-5,0,0"/>
-                    <TextBox Style="{DynamicResource CreateTicketTxtSyle}" x:Name="Flighttxt"
+                    <TextBox Style="{DynamicResource CreateTicketTxtSyle}"
+                             x:Name="Flighttxt"
                              FontFamily="Segee UI Semibold"
                              HorizontalAlignment="Center"
                              VerticalAlignment="Bottom"
