@@ -14,7 +14,18 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 > - Entity Framework 7
 > - PostgreSQL ma'lumotlar bazasi
 
- utubxonalarni o'rnatish uchun quyidagi komandalarni bajaring:
+### Projectda ishlatilgan Nuget packages
+
+> - Microsoft.EntityFrameworkCore
+> - Microsoft.EntityFrameworkCore.Design
+> - Microsoft.EntityFrameworkCore.Tools
+> - Npgsql.EntityFrameworkCore.PostgreSQL
+> - BCrypt.Net-Next
+> - Microsoft.AspNetCore.Authentication.JwtBearer
+> - Microsoft.AspNetCore.Identity.EntityFrameworkCore
+> - System.IdentityModel.Tokens.Jwt
+
+ Kutubxonalarni qayta ishga tushurish uchun quyidagi komandalarni bajaring:
  
  ``` dotnet restore ```
 
