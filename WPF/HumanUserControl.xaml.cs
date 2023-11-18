@@ -23,6 +23,8 @@ namespace WPF
         public HumanUserControl()
         {
             InitializeComponent();
+            HumanDataControl userControl = new HumanDataControl();
+            AddUserControl(userControl);
         }
         private void AddUserControl(UserControl userControl)
         {

@@ -7,6 +7,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="870">
     <Grid>
-            
+        <DataGrid x:Name="dgHuman"
+                  xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+                  CanUserAddRows="True"
+                  Background="#f4d58d"
+                  Foreground="#001427"
+                  ItemsSource="{Binding}"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="120" Header="Id" Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Width="90" Header="Firstname" Binding="{Binding Path=Firstname}"/>
+                <DataGridTextColumn Width="90" Header="Lastname" Binding="{Binding Path=Lastname}"/>
+                <DataGridTextColumn Width="60" Header="Age" Binding="{Binding Path=Age}"/>
+                <DataGridTextColumn Width="120" Header="Phone Number" Binding="{Binding Path=PhoneNumber}"/>
+                <DataGridTextColumn Width="100" Header="Location" Binding="{Binding Path=Location}"/>
+                <DataGridTextColumn Width="70" Header="CategoryId" Binding="{Binding Path=CategoryId}"/>
+                <DataGridTextColumn Width="70" Header="TicketId" Binding="{Binding Path=TicketId}"/>
+                <DataGridTextColumn Width="80" Header="Category" Binding="{Binding Path=Category}"/>
+                <DataGridTextColumn Width="80" Header="Ticket" Binding="{Binding Path=Ticket}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
