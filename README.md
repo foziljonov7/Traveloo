@@ -2,11 +2,11 @@
 
 ## Proyekt haqida
 
-Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dastur sayohatlar bilan bog'liq ma'lumotlarni boshqarish imkonini beradi.
+Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dastur sayohatlar uchun CRM sistema sifatida foydalaniladi.
 
-## Tashqi kerakli kutubxona va o'rnatish
+## Tashqi kerakli kutubxonalarni o'rnatish
 
-### Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va dasturlarni talab qiladi:
+### Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va package talab qiladi:
 
 > - .NET Framework 7 versiya
 > - Blazor 7
@@ -16,6 +16,8 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 
 ### Projectda ishlatilgan Nuget packages
 
+- API
+
 > - Microsoft.EntityFrameworkCore
 > - Microsoft.EntityFrameworkCore.Design
 > - Microsoft.EntityFrameworkCore.Tools
@@ -24,6 +26,10 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 > - Microsoft.AspNetCore.Authentication.JwtBearer
 > - Microsoft.AspNetCore.Identity.EntityFrameworkCore
 > - System.IdentityModel.Tokens.Jwt
+
+- WPF
+> - Microsoft.AspNet.WebApi.Client
+> - Newtonsoft.Json
 
  Kutubxonalarni qayta ishga tushurish uchun quyidagi komandalarni bajaring:
  
@@ -35,7 +41,7 @@ Loyihani ishga tushirish uchun quyidagi qadamllarni bajaring:
 
 **Web.config** faylida kerakli sozlamalarni o'zgartiring.
 
-Migratsiyalarni bajaring:
+Migratsiyalarni qayta ishga tushuring:
 
 ` dotnet ef database update `
 
@@ -85,19 +91,19 @@ Category
 
 Identity
 
->Registration
+> Registration
 
->>Email
+>> Email
 
->>Username
+> Username
 
->>Password
+>> Password
 
->Login
+> Login
 
->>Email
+>> Email
 
->>Password
+>> Password
 
 Muallif
 > Proyektning avtori: **Abdulvosid Foziljonov**
