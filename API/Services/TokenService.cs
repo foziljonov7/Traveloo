@@ -82,7 +82,7 @@ namespace API.Services
             DateTime expiration) =>
             new(
                 "http://localhost:5103/",
-                "https://localhost:7220/",
+                "http://localhost:5103/",
                 claims,
                 expires: expiration,
                 signingCredentials: credentials
