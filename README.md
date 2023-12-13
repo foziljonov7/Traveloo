@@ -9,8 +9,6 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 ### Ushbu proyekt ishga tushirish uchun quyidagi kutubxonalarni va package talab qiladi:
 
 > - .NET Framework 7 versiya
-> - Blazor 7
-> - WPF 7
 > - Entity Framework 7
 > - PostgreSQL ma'lumotlar bazasi
 
