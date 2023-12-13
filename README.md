@@ -25,10 +25,6 @@ Ushbu proyekt Traveloo web dasturi va desktop loyihasi uchun yaratilgan. Bu dast
 > - Microsoft.AspNetCore.Identity.EntityFrameworkCore
 > - System.IdentityModel.Tokens.Jwt
 
-- WPF
-> - Microsoft.AspNet.WebApi.Client
-> - Newtonsoft.Json
-
  Kutubxonalarni qayta ishga tushurish uchun quyidagi komandalarni bajaring:
  
  ``` dotnet restore ```
